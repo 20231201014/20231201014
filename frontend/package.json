@@ -1,0 +1,33 @@
+{
+  "name": "tieba-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "veaury": "^1.1.0",
+    "vue-router": "^4.2.4",
+    "pinia": "^2.1.6",
+    "axios": "^1.4.0",
+    "element-plus": "^2.3.8",
+    "antd": "^5.8.2",
+    "@tinymce/tinymce-vue": "^5.1.0",
+    "dayjs": "^1.11.9"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.3",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "eslint": "^8.45.0",
+    "eslint-plugin-vue": "^9.15.1",
+    "vite": "^4.4.5"
+  }
+}

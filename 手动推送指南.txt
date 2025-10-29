@@ -1,0 +1,95 @@
+# 百度贴吧项目手动推送指南
+
+## 第一步：安装Git
+
+1. 访问Git官方网站下载安装程序：
+   https://git-scm.com/download/win
+
+2. 运行下载的安装程序（通常是Git-2.x.x-64-bit.exe）
+
+3. 安装过程中选择以下选项：
+   - 选择所有默认选项
+   - 确保勾选 "Add Git to PATH"
+   - 选择 "Use Git from Git Bash only"
+   - 选择 "Checkout as-is, commit Unix-style line endings"
+   - 选择 "Use Windows' default console window"
+   - 选择 "Use Git Credential Manager"
+
+4. 完成安装后，**必须重启计算机**
+
+## 第二步：在GitHub上创建仓库
+
+1. 登录GitHub账户：https://github.com/login
+
+2. 创建新仓库：
+   - 点击右上角的 "+" 图标，选择 "New repository"
+   - 仓库名称填写：20231201014--
+   - 选择公开或私有仓库
+   - 不要勾选 "Initialize this repository with a README"
+   - 点击 "Create repository"
+
+## 第三步：手动执行Git命令推送项目
+
+**请按顺序复制以下命令并在项目文件夹中执行：**
+
+1. 首先确认Git已正确安装：
+   ```
+   git --version
+   ```
+
+2. 配置Git用户信息（请替换为您的GitHub邮箱）：
+   ```
+   git config --global user.email "您的GitHub邮箱地址"
+   git config --global user.name "2023120101"
+   ```
+
+3. 初始化Git仓库：
+   ```
+   git init
+   ```
+
+4. 添加所有文件到暂存区：
+   ```
+   git add .
+   ```
+
+5. 提交更改：
+   ```
+   git commit -m "Initial commit of Baidu Tieba Graduation Project"
+   ```
+
+6. 添加远程仓库：
+   ```
+   git remote add origin https://github.com/2023120101/20231201014--.git
+   ```
+
+7. 推送到GitHub（输入密码时请使用个人访问令牌）：
+   ```
+   git push -u origin master
+   ```
+
+## 关于个人访问令牌
+
+如果您没有GitHub个人访问令牌，请按以下步骤创建：
+
+1. 登录GitHub，点击右上角头像 → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token
+
+2. 输入令牌名称，选择过期时间
+
+3. 勾选必要的权限，至少选择 "repo" 权限
+
+4. 点击 "Generate token" 并复制生成的令牌（请妥善保存）
+
+5. 当Git要求输入密码时，粘贴此令牌作为密码
+
+## 常见问题解决
+
+- 如果提示远程仓库已存在，请先执行：
+  ```
+  git remote remove origin
+  ```
+  然后重新执行添加远程仓库的命令
+
+- 如果推送失败，可能是因为远程仓库不存在，请确保已按照第二步在GitHub上创建了仓库
+
+- 如果遇到网络问题，请检查您的网络连接或尝试使用SSH方式（需要配置SSH密钥）

@@ -1,0 +1,26 @@
+# Git 命令列表 - 复制粘贴到命令提示符中执行
+
+# 步骤1: 配置Git用户信息
+# 请将邮箱地址替换为您的GitHub邮箱
+git config --global user.name "20231201014"
+git config --global user.email "您的GitHub邮箱地址"
+
+# 步骤2: 初始化Git仓库
+git init
+
+# 步骤3: 添加所有文件到暂存区
+git add .
+
+# 步骤4: 提交更改
+git commit -m "初始化百度贴吧毕业设计项目"
+
+# 步骤5: 添加远程仓库
+git remote add origin https://github.com/20231201014/20231201014--.git
+
+# 步骤6: 推送到GitHub
+git push -u origin master
+
+# 重要提示:
+# 1. 首次推送时，请使用GitHub个人访问令牌而非密码进行身份验证
+# 2. 如果遇到错误，请参考GitHub账户推送指南.md文档
+# 3. 确保Git已正确安装并重启了计算机
